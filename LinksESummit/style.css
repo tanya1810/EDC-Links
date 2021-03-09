@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(photo-1547366785-564103df7e13.webp);
+    
+    background-repeat: none;
+    
+    background-attachment: scroll;
+    text-align: center;
+    animation: bgblur 2s;
+    backdrop-filter: blur(2px);
+
+}
+
+@keyframes bgblur {
+    0%
+    {
+        backdrop-filter: blur(0px);
+    }
+    
+}
+img{
+    
+    margin-top: 5vh;
+    box-shadow: 5px 5px 15px rgb(41, 41, 41);
+    transition: 300ms;
+    animation: imgbump 2s;
+    animation-delay: 1s;
+    
+}
+
+@keyframes imgbump
+{
+    50%
+    {
+        transform: scale(1.2);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+img:hover
+{
+    transform: scale(1.2);
+    transition: 300ms;
+}
+.links{
+    text-align: center;
+    margin-top: 10vh;
+    animation: fadein 1.5s forwards;
+    
+}
+
+@keyframes fadein
+{
+    0%
+    {
+        opacity: 0;
+       
+    }
+    70%
+    {
+        opacity: 1;
+        
+    }
+
+   
+
+}
+.links a{
+    display: inline-block;
+    text-align: center;
+    margin: 20px 10px;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    padding: 1vh;
+    padding-top: 3vh;
+    height: 7vh;
+    width: 50vw;
+    position: relative;
+    background-color: rgb(63, 136, 160);
+    text-decoration:none;
+    color: orange;
+    border-radius: 5vh;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 5vh;
+    
+}
+
+.links a:hover
+{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+    transform: scale(1.07);
+}
+
+h1{
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    margin-left: auto;
+    font-size: xx-large;
+    font-family: 'Helvetica', sans-serif;
+    color: black(229, 255, 0);
+}
+
+@media screen and (max-width: 375px)
+{
+    .links a {
+        font-size: 2.5vh;
+    }
+}
