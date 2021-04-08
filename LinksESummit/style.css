@@ -99,9 +99,10 @@ h3{
     color: white
 }
 
-@media screen and (max-width: 375px)
+@media screen and (max-width: 450px)
 {
     .links a {
-        font-size: 2.5vh;
+        width: 80%;
+        font-size: 18px;
     }
 }
