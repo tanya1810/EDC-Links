@@ -7,44 +7,57 @@
     <title>EDC Links</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style2.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="./style2.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Stick&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <center>
-        <img src="EDC WHITE-1.PNG" alt="edclogo" style="height: 290px;width: 350px; border-radius: 50%;">
+        <img src="EDC WHITE-1.PNG" alt="edclogo" style="width: 120px;">
     </center>
     <h3>@EDCTIET</h3>
     <center>
         <div class="links">
-            <a href="https://www.linkedin.com/school/entrepreneurship-development-cell-thapar-university/mycompany/">LinkedIn</a>
-            <a href="https://www.instagram.com/edc_tiet/">Instagram</a>
-            <a href="https://www.facebook.com/edctiet">Facebook</a>
-            <a href="https://www.youtube.com/channel/UCwAqOsM29M56pQataMCd9zg">Youtube</a>
-            <a href="https://www.edctiet.com/">Website</a>
-            <a href="https://twitter.com/edctiet">Twitter</a>
+            <a href="https://www.linkedin.com/school/entrepreneurship-development-cell-thapar-university/mycompany/" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/edc_tiet/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/edctiet" target="_blank">Facebook</a>
+            <a href="https://www.youtube.com/channel/UCwAqOsM29M56pQataMCd9zg" target="_blank">Youtube</a>
+            <a href="https://www.edctiet.com/" target="_blank">Website</a>
+            <a href="https://twitter.com/edctiet" target="_blank">Twitter</a>
+            <br><br><br>
         </div>
     </center>
 
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
-<div id='title'>
+    
   
 </div>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+  <script>
+      var number_of_star = 200;
+
+var random_number = function(min, max){
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+var createStars = function(){
+	var star_rotation = 'move_right;';
+	for(var i=0; i<number_of_star; i++){
+		rot= (star_rotation=='move_right;'?'move_left;':'move_right;');
+		var star_top = random_number(0,document.documentElement.clientHeight);
+		var star_left = random_number(0,document.documentElement.clientWidth);
+		var star_radius = random_number(0,4);
+		var  star_duration= random_number(6,16);
+
+		document.body.innerHTML += "<div class='star' style='top: "+star_top+"px; left: "+star_left+"px; width: "+star_radius+"px; height: "+star_radius+"px; "+
+		"animation-name:"+star_rotation+"; animation-duration: "+star_duration+"s;'></div>";
+	}
+};
+
+createStars();
+
+  </script>
 
 </body>
 </html>
