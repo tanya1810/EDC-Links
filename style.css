@@ -5,7 +5,7 @@
 
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
   max-width: 100% !important;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   background-repeat: none;
@@ -40,20 +40,8 @@ body {
 }
 img {
   margin-top: 5vh;
-
-  /* transition: 300ms;
-    animation: imgbump 2s;
-    animation-delay: 1s; */
 }
 
-@keyframes imgbump {
-  50% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
 
 .links {
   text-align: center;
