@@ -13,53 +13,56 @@
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Stick&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <center>
-        <img src="EDC WHITE-1.PNG" alt="edclogo" style="width: 120px;">
-    </center>
-    <h3>@EDCTIET</h3>
-    <center>
-        <div class="links">
-            <a href="https://www.esummit.edctiet.com/" target="_blank">E-Summit Website</a>
-            <a href="online.fliphtml5.com/gehqt/tznk" target="_blank">BizFanatics</a>
-            <a href="https://www.linkedin.com/school/entrepreneurship-development-cell-thapar-university/mycompany/" target="_blank">LinkedIn</a>
-            <a href="https://www.instagram.com/edc_tiet/" target="_blank">Instagram</a>
-            <a href="https://www.edctiet.com/" target="_blank">Website</a>
-            <a href="https://www.facebook.com/edctiet" target="_blank">Facebook</a>
-            <a href="https://www.youtube.com/channel/UCwAqOsM29M56pQataMCd9zg" target="_blank">Youtube</a>
-            <a href="https://twitter.com/edctiet" target="_blank">Twitter</a>
-            <br><br><br>
-        </div>
-    </center>
+    <div>
+        <center>
+            <img src="EDC WHITE-1.PNG" alt="edclogo" style="width: 120px;">
+        </center>
+        <h3>@EDCTIET</h3>
+        <center>
+            <div class="links">
+                <a href="https://www.linkedin.com/school/entrepreneurship-development-cell-thapar-university/mycompany/" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/edc_tiet/" target="_blank">Instagram</a>
+                <a href="https://www.edctiet.com/" target="_blank">Website</a>
+                <a href="https://www.facebook.com/edctiet" target="_blank">Facebook</a>
+                <a href="https://www.youtube.com/channel/UCwAqOsM29M56pQataMCd9zg" target="_blank">Youtube</a>
+                <a href="https://twitter.com/edctiet" target="_blank">Twitter</a>
+                <br><br><br>
+            </div>
+        </center>
 
-    
-  
-</div>
+        
+        <script>
+            var number_of_star = 500;
+
+            var random_number = function(min, max){
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+            };
+
+            var createStars = function(){
+                var height = document.body.offsetHeight
+                var width = document.body.offsetWidth 
+                var star_rotation = 'move_right;';
+                for(var i=0; i<number_of_star; i++){
+                    rot= (star_rotation=='move_right;'?'move_left;':'move_right;');
+                    var star_top = random_number(0,height);
+                    var star_left = random_number(0,width);
+                    var star_radius = random_number(0,4);
+                    var  star_duration= random_number(6,16);
+
+                    document.body.innerHTML += "<div class='star' style='top: "+star_top+"px; left: "+star_left+"px; width: "+star_radius+"px; height: "+star_radius+"px; "+
+                    "animation-name:"+star_rotation+"; animation-duration: "+star_duration+"s;'></div>";
+                }
+            };
+
+            createStars();
+
+        </script>
+        
+    </div>
+
+
 <!-- partial -->
-<script>
-    var number_of_star = 200;
-
-    var random_number = function(min, max){
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-    };
-
-    var createStars = function(){
-        var star_rotation = 'move_right;';
-        for(var i=0; i<number_of_star; i++){
-            rot= (star_rotation=='move_right;'?'move_left;':'move_right;');
-            var star_top = random_number(0,document.documentElement.clientHeight);
-            var star_left = random_number(0,document.documentElement.clientWidth);
-            var star_radius = random_number(0,4);
-            var  star_duration= random_number(6,16);
-
-            document.body.innerHTML += "<div class='star' style='top: "+star_top+"px; left: "+star_left+"px; width: "+star_radius+"px; height: "+star_radius+"px; "+
-            "animation-name:"+star_rotation+"; animation-duration: "+star_duration+"s;'></div>";
-        }
-    };
-
-    createStars();
-
-</script>
+  
 
 </body>
 </html>
