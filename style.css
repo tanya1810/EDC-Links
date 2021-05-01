@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  overflow-x: hidden;
+  max-width: 100% !important;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background-repeat: none;
+  text-align: center;
+  animation: bgblur 2s;
+  backdrop-filter: blur(2px);
+}
+
+.star {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 100%;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move_right {
+    from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+     to   { transform: rotate(360deg) translateX(8px) rotate(-360deg); }
+ }
+ 
+ @keyframes move_left {
+    from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+     to   { transform: rotate(-360deg) translateX(8px) rotate(360deg); }
+ }
+
+@keyframes bgblur {
+  0% {
+    backdrop-filter: blur(0px);
+  }
+}
+img {
+  margin-top: 5vh;
+}
+
+
+.links {
+  text-align: center;
+  margin-top: 5vh;
+  animation: fadein 1.5s forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+}
+.links a {
+  display: inline-block;
+  text-align: center;
+  margin: 10px 10px;
+  padding: 1vh;
+  padding-top: 3vh;
+  height: 5vh;
+  width: 50vw;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  font-family: "Helvetica", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.links a:hover {
+  background-color: white;
+  color: #1b2735;
+  transition: 0.3s;
+}
+
+h3 {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  margin-left: auto;
+  font-family: "Helvetica", sans-serif;
+  color: white;
+}
+
+@media screen and (max-width: 450px) {
+  .links a {
+    width: 80%;
+    font-size: 18px;
+  }
+}
